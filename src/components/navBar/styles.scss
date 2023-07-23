@@ -1,0 +1,95 @@
+.navbar{
+    background-color: var(--azul-theme-background-color);
+    height: 80PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+
+    &_container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+        padding: 0px 20px;
+
+        &_logo{
+            position: relative;
+            color: var(--azul-theme-secondary-color);
+            cursor: pointer;
+        }
+
+        &_menu{
+            position: absolute;
+            display: flex;
+            right: 0;
+            list-style: none;
+            text-align: center;
+
+            &_item{
+                line-height: 40px;
+                margin-right: 1.5rem;
+                font-size: 1.6rem;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: transparent;
+                    transition: all 0.5s ease;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                    background-color: var(--azul-theme-main-color);
+                }
+
+                &_links{
+                    color: var(--azul-theme-main-color);
+                    text-decoration: none;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.Nav_icon{
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+@media only screen and (max-width: 768px){
+    .navbar_container_menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position:absolute;
+        top: 80px;
+        left: -110%;
+        transition: all 0.5s ease;
+
+        &.active{
+            background-color: #181818;
+            left: 0px;
+            opacity: 1;
+        }
+
+        &_item{
+            border-bottom: 1px solid #282828; 
+            margin: 0px;
+            padding: 20px 0px;
+        }
+    }
+
+    .Nav_icon{
+        display: block;
+        cursor: pointer;
+        color: var(--azul-theme-secondary-color);
+        padding-right: 20px;
+    }
+}

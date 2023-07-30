@@ -6,6 +6,7 @@
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
+    z-index: 999;
 
     &_container{
         display: flex;
@@ -75,6 +76,7 @@
 
         &.active{
             background-color: #181818;
+            position: absolute;
             left: 0px;
             opacity: 1;
         }

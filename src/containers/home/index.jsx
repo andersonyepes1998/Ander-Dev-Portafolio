@@ -21,7 +21,7 @@ export function Home() {
   return (
     <>
       <div>
-        <Particles id="particles" options={particles} init={handleInit} />
+        <Particles id="particles" options={particles} init={handleInit}/>
         <NavBar />
       </div>
       <section id="home" className="home">
